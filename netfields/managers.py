@@ -75,5 +75,5 @@ class NetManager(models.Manager):
     use_for_related_fields = True
 
     def get_query_set(self):
-        q = NetQuery(self.model, connection, NetWhere)
+        q = NetQuery(self.model, NetWhere)
         return query.QuerySet(self.model, q)
